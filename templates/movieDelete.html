@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../static/style.css">
+		<title>Delete Movie</title>
+	</head>
+	<body>
+		<h3>Click your movie to Delete</h3>
+		{% for m in movies %}
+			<div>
+				<a href="{{url_for('delete_movie',movie_id=m.id)}}">{{m.name}}</a>
+			</div>
+		{% endfor %}
+	</body>
+</html>
